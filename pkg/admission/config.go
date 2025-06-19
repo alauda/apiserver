@@ -27,11 +27,11 @@ import (
 	"k8s.io/klog/v2"
 	"sigs.k8s.io/yaml"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	apiserverv1 "github.com/alauda/apiserver/pkg/apis/apiserver/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	apiserverv1 "k8s.io/apiserver/pkg/apis/apiserver/v1"
 )
 
 func makeAbs(path, base string) (string, error) {

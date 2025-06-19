@@ -20,7 +20,7 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 )
 
-// Interface is from "k8s.io/apiserver/pkg/endpoints/handlers/negotiation"
+// Interface is from "github.com/alauda/apiserver/pkg/endpoints/handlers/negotiation"
 
 // DiscoveryEndpointRestrictions allows requests to /apis to provide a Content Negotiation GVK for aggregated discovery.
 var DiscoveryEndpointRestrictions = discoveryEndpointRestrictions{}

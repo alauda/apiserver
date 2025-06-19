@@ -19,14 +19,14 @@ package fuzzer
 import (
 	"fmt"
 
-	"github.com/google/gofuzz"
+	fuzz "github.com/google/gofuzz"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
 	apitesting "k8s.io/apimachinery/pkg/api/apitesting"
 	"k8s.io/apimachinery/pkg/api/apitesting/fuzzer"
 	"k8s.io/apimachinery/pkg/runtime"
 	runtimeserializer "k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
 )
 
 // overrideMetaFuncs override some generic fuzzer funcs from k8s.io/apiserver in order to have more realistic

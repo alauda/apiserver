@@ -22,8 +22,8 @@ import (
 	"testing"
 	"time"
 
+	fcrequest "github.com/alauda/apiserver/pkg/util/flowcontrol/request"
 	"github.com/google/go-cmp/cmp"
-	fcrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 )
 
 func TestFIFOWithEnqueueDequeueSingleRequest(t *testing.T) {

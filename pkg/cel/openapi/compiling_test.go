@@ -23,10 +23,10 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/interpreter"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/common"
+	"github.com/alauda/apiserver/pkg/cel/environment"
 	"k8s.io/apimachinery/pkg/util/version"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/common"
-	"k8s.io/apiserver/pkg/cel/environment"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )
 

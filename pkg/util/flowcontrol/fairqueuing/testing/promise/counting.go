@@ -19,9 +19,9 @@ package promise
 import (
 	"sync"
 
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/counter"
+	promiseifc "github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
 	"k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/util/flowcontrol/counter"
-	promiseifc "k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
 )
 
 // countingPromise implements the WriteOnce interface.

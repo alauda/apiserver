@@ -22,9 +22,9 @@ import (
 	"testing"
 	"time"
 
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	featuregatetesting "k8s.io/component-base/featuregate/testing"
 )
 

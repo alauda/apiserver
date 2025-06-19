@@ -20,9 +20,9 @@ import (
 	"context"
 	"io"
 
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/configuration"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook/generic"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/configuration"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook/generic"
 )
 
 const (

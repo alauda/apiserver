@@ -17,8 +17,8 @@ limitations under the License.
 package openapi
 
 import (
+	"github.com/alauda/apiserver/pkg/cel/common"
 	"k8s.io/apimachinery/pkg/util/intstr"
-	"k8s.io/apiserver/pkg/cel/common"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )
 

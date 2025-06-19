@@ -25,13 +25,13 @@ import (
 	"sync"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/endpoints/metrics"
 	"k8s.io/apimachinery/pkg/api/equality"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/conversion"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/endpoints/metrics"
 	"k8s.io/klog/v2"
 )
 

@@ -29,17 +29,17 @@ import (
 	"github.com/google/cel-go/common/operators"
 	exprpb "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
 
+	api "github.com/alauda/apiserver/pkg/apis/apiserver"
+	authenticationcel "github.com/alauda/apiserver/pkg/authentication/cel"
+	authorizationcel "github.com/alauda/apiserver/pkg/authorization/cel"
+	"github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	v1 "k8s.io/api/authorization/v1"
 	"k8s.io/api/authorization/v1beta1"
 	"k8s.io/apimachinery/pkg/util/sets"
 	utilvalidation "k8s.io/apimachinery/pkg/util/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"
-	api "k8s.io/apiserver/pkg/apis/apiserver"
-	authenticationcel "k8s.io/apiserver/pkg/authentication/cel"
-	authorizationcel "k8s.io/apiserver/pkg/authorization/cel"
-	"k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/client-go/util/cert"
 )
 
@@ -346,7 +346,7 @@ func validateClaimMappings(compiler authenticationcel.Compiler, state *validatio
 		fldPath := fldPath.Child("extra").Index(i)
 		// Key should be namespaced to the authenticator or authenticator/authorizer pair making use of them.
 		// For instance: "example.org/foo" instead of "foo".
-		// xref: https://github.com/kubernetes/kubernetes/blob/3825e206cb162a7ad7431a5bdf6a065ae8422cf7/staging/src/k8s.io/apiserver/pkg/authentication/user/user.go#L31-L41
+		// xref: https://github.com/kubernetes/kubernetes/blob/3825e206cb162a7ad7431a5bdf6a065ae8422cf7/staging/src/github.com/alauda/apiserver/pkg/authentication/user/user.go#L31-L41
 		// IsDomainPrefixedPath checks for non-empty key and that the key is prefixed with a domain name.
 		allErrs = append(allErrs, utilvalidation.IsDomainPrefixedPath(fldPath.Child("key"), mapping.Key)...)
 		if mapping.Key != strings.ToLower(mapping.Key) {

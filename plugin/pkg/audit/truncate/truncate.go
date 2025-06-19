@@ -19,11 +19,11 @@ package truncate
 import (
 	"fmt"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit"
 )
 
 const (

@@ -22,8 +22,8 @@ import (
 
 	"github.com/google/cel-go/cel"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 	"k8s.io/apimachinery/pkg/util/version"
-	apiservercel "k8s.io/apiserver/pkg/cel"
 )
 
 // Type defines the different types of CEL environments used in Kubernetes.

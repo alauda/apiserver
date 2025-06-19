@@ -25,10 +25,10 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 
+	"github.com/alauda/apiserver/pkg/cel/common"
+	"github.com/alauda/apiserver/pkg/cel/environment"
+	"github.com/alauda/apiserver/pkg/cel/mutation/dynamic"
 	"k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/cel/common"
-	"k8s.io/apiserver/pkg/cel/environment"
-	"k8s.io/apiserver/pkg/cel/mutation/dynamic"
 )
 
 func TestTypeResolver(t *testing.T) {

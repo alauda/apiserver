@@ -26,10 +26,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
 	"k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 )
@@ -171,7 +171,7 @@ func (a *Authenticator) AuthenticateRequest(req *http.Request) (*authenticator.R
 					(suggested by @deads2k)
 
 				see also:
-					- for the step 1, see: staging/src/k8s.io/apiserver/pkg/server/options/serving.go
+					- for the step 1, see: staging/src/github.com/alauda/apiserver/pkg/server/options/serving.go
 					- for the step 2, see: staging/src/k8s.io/client-go/transport/transport.go
 					- for the step 3, see: staging/src/k8s.io/client-go/transport/transport.go
 	*/

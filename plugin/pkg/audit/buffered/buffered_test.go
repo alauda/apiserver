@@ -25,9 +25,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/plugin/pkg/audit/fake"
 	"k8s.io/apimachinery/pkg/util/wait"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/plugin/pkg/audit/fake"
 )
 
 var (

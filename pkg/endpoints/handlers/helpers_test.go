@@ -23,8 +23,8 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"github.com/stretchr/testify/assert"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 func TestLazyTruncatedUserAgent(t *testing.T) {

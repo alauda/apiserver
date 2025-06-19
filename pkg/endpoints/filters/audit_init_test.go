@@ -22,8 +22,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/audit"
 	"github.com/google/uuid"
-	"k8s.io/apiserver/pkg/audit"
 )
 
 func TestWithAuditID(t *testing.T) {

@@ -26,8 +26,8 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
+	api "github.com/alauda/apiserver/pkg/apis/apiserver"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	api "k8s.io/apiserver/pkg/apis/apiserver"
 )
 
 var defaultConfig = &api.AuthorizationConfiguration{}

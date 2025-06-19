@@ -23,8 +23,8 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 	"k8s.io/apimachinery/pkg/api/resource"
-	apiservercel "k8s.io/apiserver/pkg/cel"
 )
 
 // Quantity provides a CEL function library extension of Kubernetes

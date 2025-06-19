@@ -23,10 +23,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/counter"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
+	testeventclock "github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/testing/eventclock"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/util/flowcontrol/counter"
-	"k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
-	testeventclock "k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/testing/eventclock"
 	"k8s.io/klog/v2"
 )
 

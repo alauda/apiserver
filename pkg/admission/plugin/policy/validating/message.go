@@ -17,8 +17,8 @@ limitations under the License.
 package validating
 
 import (
+	"github.com/alauda/apiserver/pkg/admission/plugin/cel"
 	celgo "github.com/google/cel-go/cel"
-	"k8s.io/apiserver/pkg/admission/plugin/cel"
 )
 
 var _ cel.ExpressionAccessor = (*MessageExpressionCondition)(nil)

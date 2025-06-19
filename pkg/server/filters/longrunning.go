@@ -20,8 +20,8 @@ import (
 	"net/http"
 	"strings"
 
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/util/sets"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
 )
 
 // BasicLongRunningRequestCheck returns true if the given request has one of the specified verbs or one of the specified subresources, or is a profiler request.

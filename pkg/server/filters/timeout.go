@@ -26,12 +26,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/endpoints/metrics"
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/endpoints/responsewriter"
+	"github.com/alauda/apiserver/pkg/server/httplog"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/endpoints/metrics"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/endpoints/responsewriter"
-	"k8s.io/apiserver/pkg/server/httplog"
 )
 
 // WithTimeoutForNonLongRunningRequests times out non-long-running requests after the time given by timeout.

@@ -19,24 +19,25 @@ package filters
 import (
 	"context"
 	"errors"
-	"k8s.io/apimachinery/pkg/fields"
-	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/apimachinery/pkg/selection"
-	genericfeatures "k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
-	featuregatetesting "k8s.io/component-base/featuregate/testing"
 	"net/http"
 	"net/http/httptest"
 	"reflect"
 	"testing"
 
+	genericfeatures "github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
+	"k8s.io/apimachinery/pkg/fields"
+	"k8s.io/apimachinery/pkg/labels"
+	"k8s.io/apimachinery/pkg/selection"
+	featuregatetesting "k8s.io/component-base/featuregate/testing"
+
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	"github.com/stretchr/testify/assert"
 	batch "k8s.io/api/batch/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 )
 
 func TestGetAuthorizerAttributes(t *testing.T) {

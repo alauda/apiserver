@@ -24,13 +24,13 @@ import (
 	"path/filepath"
 	"testing"
 
+	auditv1 "github.com/alauda/apiserver/pkg/apis/audit/v1"
+	"github.com/alauda/apiserver/pkg/server"
 	"github.com/spf13/pflag"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"gopkg.in/natefinch/lumberjack.v2"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	auditv1 "k8s.io/apiserver/pkg/apis/audit/v1"
-	"k8s.io/apiserver/pkg/server"
 	v1 "k8s.io/client-go/tools/clientcmd/api/v1"
 )
 

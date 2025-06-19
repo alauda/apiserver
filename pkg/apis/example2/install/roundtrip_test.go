@@ -19,8 +19,8 @@ package install
 import (
 	"testing"
 
+	examplefuzzer "github.com/alauda/apiserver/pkg/apis/example/fuzzer"
 	"k8s.io/apimachinery/pkg/api/apitesting/roundtrip"
-	examplefuzzer "k8s.io/apiserver/pkg/apis/example/fuzzer"
 )
 
 func TestRoundTrip(t *testing.T) {

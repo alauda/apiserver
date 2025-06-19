@@ -23,9 +23,9 @@ import (
 	"net/http/httputil"
 	"testing"
 
+	genericapitesting "github.com/alauda/apiserver/pkg/endpoints/testing"
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	genericapitesting "k8s.io/apiserver/pkg/endpoints/testing"
-	"k8s.io/apiserver/pkg/registry/rest"
 )
 
 func TestPatch(t *testing.T) {

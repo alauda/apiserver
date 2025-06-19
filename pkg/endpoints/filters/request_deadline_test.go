@@ -29,13 +29,13 @@ import (
 
 	"github.com/google/go-cmp/cmp"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/audit/policy"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/audit/policy"
-	"k8s.io/apiserver/pkg/endpoints/request"
 	testingclock "k8s.io/utils/clock/testing"
 )
 

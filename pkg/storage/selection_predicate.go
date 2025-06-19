@@ -19,11 +19,11 @@ package storage
 import (
 	"context"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 // AttrFunc returns label and field sets and the uninitialized flag for List or Watch to match.

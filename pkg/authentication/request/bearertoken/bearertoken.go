@@ -21,8 +21,8 @@ import (
 	"net/http"
 	"strings"
 
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/warning"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/warning"
 )
 
 const (

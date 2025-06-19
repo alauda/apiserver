@@ -23,12 +23,12 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/util/proxy/metrics"
 	"github.com/mxk/go-flowrate/flowrate"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/httpstream/spdy"
 	constants "k8s.io/apimachinery/pkg/util/remotecommand"
-	"k8s.io/apiserver/pkg/util/proxy/metrics"
 	"k8s.io/client-go/tools/remotecommand"
 	"k8s.io/client-go/util/exec"
 )

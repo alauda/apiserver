@@ -22,7 +22,7 @@ import (
 	"sync"
 	"time"
 
-	"k8s.io/apiserver/pkg/server/healthz"
+	"github.com/alauda/apiserver/pkg/server/healthz"
 	"k8s.io/utils/clock"
 )
 

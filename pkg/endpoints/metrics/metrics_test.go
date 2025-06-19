@@ -23,10 +23,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/endpoints/responsewriter"
 	metainternalversion "k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	"k8s.io/apimachinery/pkg/fields"
-	"k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/endpoints/responsewriter"
 	"k8s.io/component-base/metrics/legacyregistry"
 	"k8s.io/component-base/metrics/testutil"
 )

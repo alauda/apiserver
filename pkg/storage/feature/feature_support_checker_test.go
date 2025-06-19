@@ -21,9 +21,9 @@ import (
 	"fmt"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/storage"
 	"github.com/stretchr/testify/assert"
 	clientv3 "go.etcd.io/etcd/client/v3"
-	"k8s.io/apiserver/pkg/storage"
 )
 
 type mockEndpointVersion struct {

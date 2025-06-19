@@ -23,12 +23,12 @@ import (
 	"strings"
 	"testing"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 	"k8s.io/component-base/metrics/legacyregistry"
 	"k8s.io/component-base/metrics/testutil"
 )

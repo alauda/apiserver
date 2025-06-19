@@ -20,12 +20,12 @@ import (
 	"context"
 	"time"
 
+	genericrequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/debug"
+	fq "github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
+	fcrequest "github.com/alauda/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/apimachinery/pkg/util/sets"
-	genericrequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/util/flowcontrol/debug"
-	fq "k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing"
-	"k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/promise"
-	fcrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 )
 
 // request is a temporary container for "requests" with additional

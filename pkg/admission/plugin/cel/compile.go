@@ -21,13 +21,13 @@ import (
 
 	"github.com/google/cel-go/cel"
 
+	celconfig "github.com/alauda/apiserver/pkg/apis/cel"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/common"
+	"github.com/alauda/apiserver/pkg/cel/environment"
+	"github.com/alauda/apiserver/pkg/cel/library"
+	"github.com/alauda/apiserver/pkg/cel/mutation"
 	"k8s.io/apimachinery/pkg/util/version"
-	celconfig "k8s.io/apiserver/pkg/apis/cel"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/common"
-	"k8s.io/apiserver/pkg/cel/environment"
-	"k8s.io/apiserver/pkg/cel/library"
-	"k8s.io/apiserver/pkg/cel/mutation"
 )
 
 const (
@@ -163,7 +163,7 @@ func NewCompiler(env *environment.EnvSet) Compiler {
 type variableDeclEnvs map[OptionalVariableDeclarations]*environment.EnvSet
 
 // CompileCELExpression returns a compiled CEL expression.
-// perCallLimit was added for testing purpose only. Callers should always use const PerCallLimit from k8s.io/apiserver/pkg/apis/cel/config.go as input.
+// perCallLimit was added for testing purpose only. Callers should always use const PerCallLimit from github.com/alauda/apiserver/pkg/apis/cel/config.go as input.
 func (c compiler) CompileCELExpression(expressionAccessor ExpressionAccessor, options OptionalVariableDeclarations, envType environment.Type) CompilationResult {
 	resultError := func(errorString string, errType apiservercel.ErrorType, cause error) CompilationResult {
 		return CompilationResult{

@@ -20,7 +20,7 @@ import (
 	"fmt"
 	"net/url"
 
-	"k8s.io/apiserver/pkg/util/webhook"
+	"github.com/alauda/apiserver/pkg/util/webhook"
 )
 
 type serviceResolver struct {

@@ -25,11 +25,11 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	apiserverapiv1 "github.com/alauda/apiserver/pkg/apis/apiserver/v1"
+	apiserverapiv1alpha1 "github.com/alauda/apiserver/pkg/apis/apiserver/v1alpha1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/json"
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	apiserverapiv1 "k8s.io/apiserver/pkg/apis/apiserver/v1"
-	apiserverapiv1alpha1 "k8s.io/apiserver/pkg/apis/apiserver/v1alpha1"
 )
 
 func TestReadAdmissionConfiguration(t *testing.T) {

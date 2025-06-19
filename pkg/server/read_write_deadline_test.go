@@ -27,8 +27,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 func TestRequestTimeoutBehavior(t *testing.T) {

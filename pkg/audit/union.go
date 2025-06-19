@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"strings"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
 	"k8s.io/apimachinery/pkg/util/errors"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
 )
 
 // Union returns an audit Backend which logs events to a set of backends. The returned

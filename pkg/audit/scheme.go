@@ -18,13 +18,13 @@ limitations under the License.
 package audit
 
 import (
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	v1 "github.com/alauda/apiserver/pkg/apis/audit/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/apis/audit/v1"
 )
 
 var Scheme = runtime.NewScheme()

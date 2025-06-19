@@ -17,10 +17,10 @@ limitations under the License.
 package authenticatorfactory
 
 import (
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/request/bearertoken"
-	"k8s.io/apiserver/pkg/authentication/token/tokenfile"
-	"k8s.io/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/request/bearertoken"
+	"github.com/alauda/apiserver/pkg/authentication/token/tokenfile"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 )
 
 // NewFromTokens returns an authenticator.Request or an error

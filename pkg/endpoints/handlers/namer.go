@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 // ScopeNamer handles accessing names from requests and objects

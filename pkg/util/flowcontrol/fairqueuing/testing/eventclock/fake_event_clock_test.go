@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/eventclock"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/eventclock"
 )
 
 type TestableEventClock interface {

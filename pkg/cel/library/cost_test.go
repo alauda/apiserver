@@ -19,8 +19,9 @@ package library
 import (
 	"context"
 	"fmt"
-	"github.com/google/cel-go/common/types/ref"
 	"testing"
+
+	"github.com/google/cel-go/common/types/ref"
 
 	"github.com/google/cel-go/cel"
 	"github.com/google/cel-go/checker"
@@ -30,8 +31,8 @@ import (
 	"github.com/google/cel-go/ext"
 	exprpb "google.golang.org/genproto/googleapis/api/expr/v1alpha1"
 
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	apiservercel "k8s.io/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 )
 
 const (

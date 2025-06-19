@@ -21,11 +21,11 @@ import (
 	"io"
 	"os"
 
+	api "github.com/alauda/apiserver/pkg/apis/apiserver"
+	"github.com/alauda/apiserver/pkg/apis/apiserver/install"
+	externalapi "github.com/alauda/apiserver/pkg/apis/apiserver/v1alpha1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	api "k8s.io/apiserver/pkg/apis/apiserver"
-	"k8s.io/apiserver/pkg/apis/apiserver/install"
-	externalapi "k8s.io/apiserver/pkg/apis/apiserver/v1alpha1"
 )
 
 var (

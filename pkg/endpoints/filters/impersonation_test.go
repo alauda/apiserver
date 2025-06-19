@@ -26,12 +26,12 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	authenticationapi "k8s.io/api/authentication/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 type impersonateAuthorizer struct{}

@@ -21,13 +21,13 @@ import (
 
 	celgo "github.com/google/cel-go/cel"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/plugin/cel"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/plugin/cel"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 )
 
 var _ cel.ExpressionAccessor = &ValidationCondition{}
@@ -90,6 +90,6 @@ type ValidateResult struct {
 // Validator is contains logic for converting ValidationEvaluation to PolicyDecisions
 type Validator interface {
 	// Validate is used to take cel evaluations and convert into decisions
-	// runtimeCELCostBudget was added for testing purpose only. Callers should always use const RuntimeCELCostBudget from k8s.io/apiserver/pkg/apis/cel/config.go as input.
+	// runtimeCELCostBudget was added for testing purpose only. Callers should always use const RuntimeCELCostBudget from github.com/alauda/apiserver/pkg/apis/cel/config.go as input.
 	Validate(ctx context.Context, matchedResource schema.GroupVersionResource, versionedAttr *admission.VersionedAttributes, versionedParams runtime.Object, namespace *corev1.Namespace, runtimeCELCostBudget int64, authz authorizer.Authorizer) ValidateResult
 }

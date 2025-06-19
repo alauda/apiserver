@@ -24,15 +24,15 @@ import (
 	"strconv"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/util/webhook"
 	authenticationv1 "k8s.io/api/authentication/v1"
 	authenticationv1beta1 "k8s.io/api/authentication/v1beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/util/webhook"
 	"k8s.io/client-go/kubernetes/scheme"
 	authenticationv1client "k8s.io/client-go/kubernetes/typed/authentication/v1"
 	"k8s.io/client-go/rest"
@@ -63,7 +63,7 @@ type WebhookTokenAuthenticator struct {
 // NewFromInterface creates a webhook authenticator using the given tokenReview
 // client. It is recommend to wrap this authenticator with the token cache
 // authenticator implemented in
-// k8s.io/apiserver/pkg/authentication/token/cache.
+// github.com/alauda/apiserver/pkg/authentication/token/cache.
 func NewFromInterface(tokenReview authenticationv1client.AuthenticationV1Interface, implicitAuds authenticator.Audiences, retryBackoff wait.Backoff, requestTimeout time.Duration, metrics AuthenticatorMetrics) (*WebhookTokenAuthenticator, error) {
 	tokenReviewClient := &tokenReviewV1Client{tokenReview.RESTClient()}
 	return newWithBackoff(tokenReviewClient, retryBackoff, implicitAuds, requestTimeout, metrics)
@@ -72,7 +72,7 @@ func NewFromInterface(tokenReview authenticationv1client.AuthenticationV1Interfa
 // New creates a new WebhookTokenAuthenticator from the provided rest
 // config. It is recommend to wrap this authenticator with the token cache
 // authenticator implemented in
-// k8s.io/apiserver/pkg/authentication/token/cache.
+// github.com/alauda/apiserver/pkg/authentication/token/cache.
 func New(config *rest.Config, version string, implicitAuds authenticator.Audiences, retryBackoff wait.Backoff) (*WebhookTokenAuthenticator, error) {
 	tokenReview, err := tokenReviewInterfaceFromConfig(config, version, retryBackoff)
 	if err != nil {

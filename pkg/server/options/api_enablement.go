@@ -22,9 +22,9 @@ import (
 
 	"github.com/spf13/pflag"
 
-	"k8s.io/apiserver/pkg/server"
-	"k8s.io/apiserver/pkg/server/resourceconfig"
-	serverstore "k8s.io/apiserver/pkg/server/storage"
+	"github.com/alauda/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/server/resourceconfig"
+	serverstore "github.com/alauda/apiserver/pkg/server/storage"
 	cliflag "k8s.io/component-base/cli/flag"
 )
 

@@ -29,9 +29,9 @@ import (
 	"reflect"
 	"testing"
 
+	auditapi "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit"
 	"github.com/stretchr/testify/require"
-	auditapi "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit"
 	"k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/testutil"
 )

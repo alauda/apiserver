@@ -42,9 +42,9 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/component-base/featuregate"
 
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/initializer"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/initializer"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 )
 
 // PolicyTestContext is everything you need to unit test a policy plugin

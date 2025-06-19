@@ -21,6 +21,10 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook/predicates/namespace"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook/predicates/object"
+	"github.com/alauda/apiserver/pkg/apis/example"
 	v1 "k8s.io/api/admissionregistration/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -28,10 +32,6 @@ import (
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook/predicates/namespace"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook/predicates/object"
-	"k8s.io/apiserver/pkg/apis/example"
 )
 
 var _ MatchCriteria = &fakeCriteria{}

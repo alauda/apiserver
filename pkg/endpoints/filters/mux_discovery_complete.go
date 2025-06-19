@@ -39,7 +39,7 @@ func NoMuxAndDiscoveryIncompleteKey(ctx context.Context) bool {
 // Putting the key protect us from returning a 404 response instead of a 503.
 // It is especially important for controllers like GC and NS since they act on 404s.
 //
-// The presence of the key is checked in the NotFoundHandler (staging/src/k8s.io/apiserver/pkg/util/notfoundhandler/not_found_handler.go)
+// The presence of the key is checked in the NotFoundHandler (staging/src/github.com/alauda/apiserver/pkg/util/notfoundhandler/not_found_handler.go)
 //
 // The primary reason this filter exists is to protect from a potential race between the client's requests reaching the NotFoundHandler and the server becoming ready.
 // Without the protection key a request could still get a 404 response when the registered signals changed their status just slightly before reaching the new handler.

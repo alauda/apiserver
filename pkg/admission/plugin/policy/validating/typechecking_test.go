@@ -22,13 +22,13 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/api/admissionregistration/v1"
+	"github.com/alauda/apiserver/pkg/cel/openapi/resolver"
+	v1 "k8s.io/api/admissionregistration/v1"
 	appsv1 "k8s.io/api/apps/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/cel/openapi/resolver"
 	"k8s.io/client-go/kubernetes/fake"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )

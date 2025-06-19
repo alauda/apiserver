@@ -25,22 +25,22 @@ import (
 
 	"github.com/google/cel-go/cel"
 
-	"k8s.io/api/admissionregistration/v1"
+	plugincel "github.com/alauda/apiserver/pkg/admission/plugin/cel"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/common"
+	"github.com/alauda/apiserver/pkg/cel/environment"
+	"github.com/alauda/apiserver/pkg/cel/library"
+	"github.com/alauda/apiserver/pkg/cel/openapi"
+	"github.com/alauda/apiserver/pkg/cel/openapi/resolver"
+	"github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
+	v1 "k8s.io/api/admissionregistration/v1"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	"k8s.io/apimachinery/pkg/util/version"
-	plugincel "k8s.io/apiserver/pkg/admission/plugin/cel"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/common"
-	"k8s.io/apiserver/pkg/cel/environment"
-	"k8s.io/apiserver/pkg/cel/library"
-	"k8s.io/apiserver/pkg/cel/openapi"
-	"k8s.io/apiserver/pkg/cel/openapi/resolver"
-	"k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/klog/v2"
 )
 
@@ -457,7 +457,7 @@ type typeCheckingCompiler struct {
 }
 
 // CompileCELExpression compiles the given expression.
-// The implementation is the same as that of staging/src/k8s.io/apiserver/pkg/admission/plugin/cel/compile.go
+// The implementation is the same as that of staging/src/github.com/alauda/apiserver/pkg/admission/plugin/cel/compile.go
 // except that:
 // - object, oldObject, and params are typed instead of Dyn
 // - compiler does not enforce the output type

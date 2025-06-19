@@ -20,9 +20,9 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/alauda/apiserver/pkg/reconcilers"
+	"github.com/alauda/apiserver/pkg/storageversion"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/reconcilers"
-	"k8s.io/apiserver/pkg/storageversion"
 	kubeinformers "k8s.io/client-go/informers"
 	"k8s.io/client-go/tools/cache"
 )

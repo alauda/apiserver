@@ -23,10 +23,10 @@ import (
 	"strings"
 	"testing"
 
-	"k8s.io/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/apis/audit"
 
 	// import to call webhook's init() function to register audit.Policy to schema
-	_ "k8s.io/apiserver/plugin/pkg/audit/webhook"
+	_ "github.com/alauda/apiserver/plugin/pkg/audit/webhook"
 
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/assert"

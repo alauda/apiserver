@@ -19,8 +19,8 @@ package admission
 import (
 	"testing"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
 	"github.com/stretchr/testify/assert"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
 )
 
 func TestAddAnnotation(t *testing.T) {

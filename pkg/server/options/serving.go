@@ -29,9 +29,9 @@ import (
 	"k8s.io/klog/v2"
 	netutils "k8s.io/utils/net"
 
+	"github.com/alauda/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/server/dynamiccertificates"
 	utilnet "k8s.io/apimachinery/pkg/util/net"
-	"k8s.io/apiserver/pkg/server"
-	"k8s.io/apiserver/pkg/server/dynamiccertificates"
 	certutil "k8s.io/client-go/util/cert"
 	"k8s.io/client-go/util/keyutil"
 	cliflag "k8s.io/component-base/cli/flag"
@@ -296,7 +296,7 @@ func (s *SecureServingOptions) ApplyTo(config **server.SecureServingInfo) error 
 			see also:
 				- for the step 2, see: staging/src/k8s.io/client-go/transport/transport.go
 				- for the step 3, see: staging/src/k8s.io/client-go/transport/transport.go
-				- for the step 4, see: staging/src/k8s.io/apiserver/pkg/authentication/request/x509/x509.go
+				- for the step 4, see: staging/src/github.com/alauda/apiserver/pkg/authentication/request/x509/x509.go
 	*/
 
 	if len(serverCertFile) != 0 || len(serverKeyFile) != 0 {

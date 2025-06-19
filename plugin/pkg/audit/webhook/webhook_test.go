@@ -31,13 +31,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	auditv1 "github.com/alauda/apiserver/pkg/apis/audit/v1"
+	"github.com/alauda/apiserver/pkg/audit"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer/json"
 	"k8s.io/apimachinery/pkg/util/wait"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	auditv1 "k8s.io/apiserver/pkg/apis/audit/v1"
-	"k8s.io/apiserver/pkg/audit"
 	v1 "k8s.io/client-go/tools/clientcmd/api/v1"
 )
 

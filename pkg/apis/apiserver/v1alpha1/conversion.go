@@ -17,8 +17,8 @@ limitations under the License.
 package v1alpha1
 
 import (
+	apiserver "github.com/alauda/apiserver/pkg/apis/apiserver"
 	conversion "k8s.io/apimachinery/pkg/conversion"
-	apiserver "k8s.io/apiserver/pkg/apis/apiserver"
 )
 
 func Convert_v1alpha1_EgressSelection_To_apiserver_EgressSelection(in *EgressSelection, out *apiserver.EgressSelection, s conversion.Scope) error {

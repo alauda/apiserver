@@ -26,9 +26,9 @@ import (
 	"github.com/google/cel-go/common/types/ref"
 	"github.com/stretchr/testify/require"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	library "github.com/alauda/apiserver/pkg/cel/library"
 	"k8s.io/apimachinery/pkg/util/sets"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	library "k8s.io/apiserver/pkg/cel/library"
 )
 
 func testSemver(t *testing.T, expr string, expectResult ref.Val, expectRuntimeErrPattern string, expectCompileErrs []string) {

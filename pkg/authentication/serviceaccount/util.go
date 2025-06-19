@@ -20,9 +20,9 @@ import (
 	"fmt"
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	v1 "k8s.io/api/core/v1"
 	apimachineryvalidation "k8s.io/apimachinery/pkg/api/validation"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 const (

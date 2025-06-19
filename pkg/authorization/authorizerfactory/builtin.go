@@ -20,8 +20,8 @@ import (
 	"context"
 	"errors"
 
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 )
 
 // alwaysAllowAuthorizer is an implementation of authorizer.Attributes

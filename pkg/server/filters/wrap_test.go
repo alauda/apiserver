@@ -23,9 +23,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/server/routine"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/server/routine"
 	"k8s.io/klog/v2"
 )
 

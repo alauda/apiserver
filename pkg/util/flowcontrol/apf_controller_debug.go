@@ -26,10 +26,10 @@ import (
 	"text/tabwriter"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/server/mux"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/debug"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/server/mux"
-	"k8s.io/apiserver/pkg/util/flowcontrol/debug"
 )
 
 const (

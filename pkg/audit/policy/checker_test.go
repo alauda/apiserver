@@ -23,9 +23,9 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 )
 
 var (

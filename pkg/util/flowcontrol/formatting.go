@@ -19,7 +19,7 @@ package flowcontrol
 import (
 	"fmt"
 
-	fcfmt "k8s.io/apiserver/pkg/util/flowcontrol/format"
+	fcfmt "github.com/alauda/apiserver/pkg/util/flowcontrol/format"
 )
 
 var _ fmt.GoStringer = RequestDigest{}

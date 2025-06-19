@@ -19,8 +19,8 @@ package storage
 import (
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/storage/testresource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/storage/testresource"
 )
 
 func TestObjectVersioner(t *testing.T) {

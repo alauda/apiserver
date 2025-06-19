@@ -32,7 +32,7 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"k8s.io/apiserver/pkg/storage/value"
+	"github.com/alauda/apiserver/pkg/storage/value"
 )
 
 func TestGCMDataStable(t *testing.T) {

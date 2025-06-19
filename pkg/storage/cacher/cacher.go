@@ -28,6 +28,13 @@ import (
 	"go.opentelemetry.io/otel/attribute"
 	"google.golang.org/grpc/metadata"
 
+	"github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/features"
+	"github.com/alauda/apiserver/pkg/storage"
+	"github.com/alauda/apiserver/pkg/storage/cacher/metrics"
+	etcdfeature "github.com/alauda/apiserver/pkg/storage/feature"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -38,13 +45,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/features"
-	"k8s.io/apiserver/pkg/storage"
-	"k8s.io/apiserver/pkg/storage/cacher/metrics"
-	etcdfeature "k8s.io/apiserver/pkg/storage/feature"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/component-base/tracing"
 	"k8s.io/klog/v2"
@@ -767,7 +767,7 @@ func (c *Cacher) Get(ctx context.Context, key string, opts storage.GetOptions, o
 
 // NOTICE: Keep in sync with shouldListFromStorage function in
 //
-//	staging/src/k8s.io/apiserver/pkg/util/flowcontrol/request/list_work_estimator.go
+//	staging/src/github.com/alauda/apiserver/pkg/util/flowcontrol/request/list_work_estimator.go
 func shouldDelegateList(opts storage.ListOptions) bool {
 	resourceVersion := opts.ResourceVersion
 	pred := opts.Predicate

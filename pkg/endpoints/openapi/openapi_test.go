@@ -20,8 +20,8 @@ import (
 	"reflect"
 	"testing"
 
+	openapitesting "github.com/alauda/apiserver/pkg/endpoints/openapi/testing"
 	"k8s.io/apimachinery/pkg/runtime"
-	openapitesting "k8s.io/apiserver/pkg/endpoints/openapi/testing"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )
 
@@ -42,7 +42,7 @@ func TestGetDefinitionName(t *testing.T) {
 	// in production, the name is stripped of ".*vendor/" prefix before passed
 	// to GetDefinitionName, so here typePkgName does not have the
 	// "k8s.io/kubernetes/vendor" prefix.
-	typePkgName := "k8s.io/apiserver/pkg/endpoints/openapi/testing.TestType"
+	typePkgName := "github.com/alauda/apiserver/pkg/endpoints/openapi/testing.TestType"
 	typeFriendlyName := "io.k8s.apiserver.pkg.endpoints.openapi.testing.TestType"
 	s := runtime.NewScheme()
 	s.AddKnownTypeWithName(testType.GroupVersionKind(), &testType)

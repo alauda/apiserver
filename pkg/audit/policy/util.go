@@ -17,8 +17,8 @@ limitations under the License.
 package policy
 
 import (
+	"github.com/alauda/apiserver/pkg/apis/audit"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/apis/audit"
 )
 
 // AllStages returns all possible stages

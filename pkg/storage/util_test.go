@@ -22,6 +22,13 @@ import (
 	"sync"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	example2v1 "github.com/alauda/apiserver/pkg/apis/example2/v1"
+	"github.com/alauda/apiserver/pkg/storage"
+	"github.com/alauda/apiserver/pkg/storage/etcd3"
+	etcd3testing "github.com/alauda/apiserver/pkg/storage/etcd3/testing"
+	"github.com/alauda/apiserver/pkg/storage/value/encrypt/identity"
 	"github.com/stretchr/testify/require"
 	"k8s.io/apimachinery/pkg/api/apitesting"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -29,13 +36,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	example2v1 "k8s.io/apiserver/pkg/apis/example2/v1"
-	"k8s.io/apiserver/pkg/storage"
-	"k8s.io/apiserver/pkg/storage/etcd3"
-	etcd3testing "k8s.io/apiserver/pkg/storage/etcd3/testing"
-	"k8s.io/apiserver/pkg/storage/value/encrypt/identity"
 )
 
 var (

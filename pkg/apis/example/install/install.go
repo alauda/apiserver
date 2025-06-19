@@ -19,10 +19,10 @@ limitations under the License.
 package install
 
 import (
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
 )
 
 // Install registers the API group and adds types to a scheme

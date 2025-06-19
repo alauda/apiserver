@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	"github.com/alauda/apiserver/pkg/server/egressselector/metrics"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	utilnet "k8s.io/apimachinery/pkg/util/net"
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	"k8s.io/apiserver/pkg/server/egressselector/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 	"k8s.io/component-base/metrics/testutil"
 	testingclock "k8s.io/utils/clock/testing"

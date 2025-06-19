@@ -22,7 +22,7 @@ import (
 	"sync"
 	"testing"
 
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
 
 	"github.com/stretchr/testify/assert"
 )

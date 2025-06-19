@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"strings"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
 )
 
 // WithFailedAuthenticationAudit decorates a failed http.Handler used in WithAuthentication handler.

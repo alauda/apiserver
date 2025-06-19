@@ -20,11 +20,11 @@ import (
 	"fmt"
 	"io"
 
+	resourcequotaapi "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
+	"github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/install"
+	resourcequotav1 "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
-	resourcequotaapi "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
-	"k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/install"
-	resourcequotav1 "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"
 )
 
 var (

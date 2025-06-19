@@ -23,9 +23,9 @@ import (
 
 	"github.com/google/cel-go/cel"
 
+	"github.com/alauda/apiserver/pkg/cel/library"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/cel/library"
 )
 
 // BenchmarkLoadBaseEnv is expected to be very fast, because a
@@ -134,7 +134,7 @@ func TestKnownLibraries(t *testing.T) {
 	unexpected := used.Difference(known)
 
 	if len(unexpected) != 0 {
-		t.Errorf("Expected all libraries in the base environment to be included in k8s.io/apiserver/pkg/cel/library's KnownLibraries, but found missing libraries: %v", unexpected)
+		t.Errorf("Expected all libraries in the base environment to be included in github.com/alauda/apiserver/pkg/cel/library's KnownLibraries, but found missing libraries: %v", unexpected)
 	}
 }
 

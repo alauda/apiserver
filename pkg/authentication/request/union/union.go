@@ -19,8 +19,8 @@ package union
 import (
 	"net/http"
 
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
 )
 
 // unionAuthRequestHandler authenticates requests using a chain of authenticator.Requests

@@ -26,7 +26,7 @@ import (
 	"reflect"
 	"testing"
 
-	"k8s.io/apiserver/pkg/storage/value"
+	"github.com/alauda/apiserver/pkg/storage/value"
 )
 
 var (

@@ -25,7 +25,7 @@ import (
 	"k8s.io/component-base/metrics/legacyregistry"
 	"k8s.io/component-base/metrics/testutil"
 
-	discoveryendpoint "k8s.io/apiserver/pkg/endpoints/discovery/aggregated"
+	discoveryendpoint "github.com/alauda/apiserver/pkg/endpoints/discovery/aggregated"
 )
 
 func formatExpectedMetrics(aggregationCount int) io.Reader {

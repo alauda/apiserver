@@ -15,9 +15,9 @@ limitations under the License.
 */
 
 // +k8s:deepcopy-gen=package
-// +k8s:conversion-gen=k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota
+// +k8s:conversion-gen=github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota
 // +k8s:defaulter-gen=TypeMeta
 // +groupName=resourcequota.admission.k8s.io
 
 // Package v1 is the v1 version of the API.
-package v1 // import "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"
+package v1 // import "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"

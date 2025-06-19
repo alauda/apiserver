@@ -25,9 +25,9 @@ import (
 	"github.com/google/cel-go/common/types/ref"
 	"github.com/google/cel-go/interpreter"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/environment"
 	"k8s.io/apimachinery/pkg/util/version"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/environment"
 )
 
 func TestLazyMapType(t *testing.T) {

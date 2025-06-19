@@ -17,10 +17,10 @@ limitations under the License.
 package generic
 
 import (
+	"github.com/alauda/apiserver/pkg/storage"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend/factory"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/storage"
-	"k8s.io/apiserver/pkg/storage/storagebackend"
-	"k8s.io/apiserver/pkg/storage/storagebackend/factory"
 	"k8s.io/client-go/tools/cache"
 )
 

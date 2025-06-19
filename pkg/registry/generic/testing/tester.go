@@ -21,16 +21,16 @@ import (
 	"fmt"
 	"testing"
 
+	genericregistry "github.com/alauda/apiserver/pkg/registry/generic/registry"
+	"github.com/alauda/apiserver/pkg/registry/rest"
+	"github.com/alauda/apiserver/pkg/registry/rest/resttest"
+	storagetesting "github.com/alauda/apiserver/pkg/storage/testing"
 	"k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
-	genericregistry "k8s.io/apiserver/pkg/registry/generic/registry"
-	"k8s.io/apiserver/pkg/registry/rest"
-	"k8s.io/apiserver/pkg/registry/rest/resttest"
-	storagetesting "k8s.io/apiserver/pkg/storage/testing"
 )
 
 type Tester struct {

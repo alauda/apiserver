@@ -23,9 +23,9 @@ import (
 
 	celgo "github.com/google/cel-go/cel"
 
+	"github.com/alauda/apiserver/pkg/cel/environment"
+	"github.com/alauda/apiserver/pkg/cel/library"
 	"k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/cel/environment"
-	"k8s.io/apiserver/pkg/cel/library"
 )
 
 func TestCompileValidatingPolicyExpression(t *testing.T) {

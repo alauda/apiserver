@@ -19,9 +19,9 @@ package policy
 import (
 	"strings"
 
-	"k8s.io/apiserver/pkg/apis/audit"
-	auditinternal "k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/apis/audit"
+	auditinternal "github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 )
 
 const (

@@ -22,12 +22,12 @@ import (
 	"sync"
 	"unicode/utf8"
 
+	"github.com/alauda/apiserver/pkg/warning"
 	"k8s.io/apimachinery/pkg/util/net"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/warning"
 )
 
-// WithWarningRecorder attaches a deduplicating k8s.io/apiserver/pkg/warning#WarningRecorder to the request context.
+// WithWarningRecorder attaches a deduplicating github.com/alauda/apiserver/pkg/warning#WarningRecorder to the request context.
 func WithWarningRecorder(handler http.Handler) http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 		recorder := &recorder{writer: w}

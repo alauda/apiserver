@@ -19,9 +19,9 @@ package anonymous
 import (
 	"net/http"
 
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 )
 
 const (

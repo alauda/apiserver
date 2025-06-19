@@ -28,9 +28,9 @@ import (
 	"context"
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 )
 
 // unionAuthzHandler authorizer against a chain of authorizer.Authorizer

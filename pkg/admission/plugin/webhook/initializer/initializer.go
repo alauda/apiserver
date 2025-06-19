@@ -19,8 +19,8 @@ package initializer
 import (
 	"net/url"
 
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/util/webhook"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/util/webhook"
 )
 
 // WantsServiceResolver defines a function that accepts a ServiceResolver for

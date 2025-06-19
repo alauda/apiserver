@@ -23,9 +23,9 @@ import (
 	"io"
 	"testing"
 
+	genericfeatures "github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	"github.com/stretchr/testify/assert"
-	genericfeatures "k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	featuregatetesting "k8s.io/component-base/featuregate/testing"
 )
 

@@ -23,11 +23,11 @@ import (
 	goruntime "runtime"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/endpoints/metrics"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/endpoints/metrics"
 	"k8s.io/klog/v2"
 )
 

@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 )
 
 func TestAuthenticateRequest(t *testing.T) {

@@ -23,17 +23,17 @@ import (
 	"sort"
 	"sync"
 
+	apidiscoveryv2conversion "github.com/alauda/apiserver/pkg/apis/apidiscovery/v2"
 	apidiscoveryv2 "k8s.io/api/apidiscovery/v2"
 	apidiscoveryv2beta1 "k8s.io/api/apidiscovery/v2beta1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/apimachinery/pkg/version"
-	apidiscoveryv2conversion "k8s.io/apiserver/pkg/apis/apidiscovery/v2"
 
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
 
-	"k8s.io/apiserver/pkg/endpoints/handlers/negotiation"
-	"k8s.io/apiserver/pkg/endpoints/metrics"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/negotiation"
+	"github.com/alauda/apiserver/pkg/endpoints/metrics"
 
 	"sync/atomic"
 

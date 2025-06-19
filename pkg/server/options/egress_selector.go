@@ -22,8 +22,8 @@ import (
 	"github.com/spf13/pflag"
 	"k8s.io/utils/path"
 
-	"k8s.io/apiserver/pkg/server"
-	"k8s.io/apiserver/pkg/server/egressselector"
+	"github.com/alauda/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/server/egressselector"
 )
 
 // EgressSelectorOptions holds the api server egress selector options.

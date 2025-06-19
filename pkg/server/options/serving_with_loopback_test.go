@@ -20,7 +20,7 @@ import (
 	"net"
 	"testing"
 
-	"k8s.io/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/server"
 	"k8s.io/client-go/rest"
 	netutils "k8s.io/utils/net"
 )

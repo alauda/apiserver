@@ -27,17 +27,17 @@ import (
 	"go.etcd.io/etcd/client/pkg/v3/transport"
 	noopoteltrace "go.opentelemetry.io/otel/trace/noop"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	"github.com/alauda/apiserver/pkg/storage/etcd3/testing/testingcert"
+	"github.com/alauda/apiserver/pkg/storage/etcd3/testserver"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend"
 	apitesting "k8s.io/apimachinery/pkg/api/apitesting"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	"k8s.io/apiserver/pkg/storage/etcd3/testing/testingcert"
-	"k8s.io/apiserver/pkg/storage/etcd3/testserver"
-	"k8s.io/apiserver/pkg/storage/storagebackend"
 )
 
 var scheme = runtime.NewScheme()

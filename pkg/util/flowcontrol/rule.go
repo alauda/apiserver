@@ -19,10 +19,10 @@ package flowcontrol
 import (
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/authentication/serviceaccount"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	flowcontrol "k8s.io/api/flowcontrol/v1"
-	"k8s.io/apiserver/pkg/authentication/serviceaccount"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 // Tests whether a given request and FlowSchema match.  Nobody mutates
@@ -88,7 +88,7 @@ func matchesSubject(user user.Info, subject flowcontrol.Subject) bool {
 
 // serviceAccountMatchesNamespace checks whether the provided service account username matches the namespace, without
 // allocating. Use this when checking a service account namespace against a known string.
-// This is copied from `k8s.io/apiserver/pkg/authentication/serviceaccount::MatchesUsername` and simplified to not check the name part.
+// This is copied from `github.com/alauda/apiserver/pkg/authentication/serviceaccount::MatchesUsername` and simplified to not check the name part.
 func serviceAccountMatchesNamespace(namespace string, username string) bool {
 	const (
 		ServiceAccountUsernamePrefix    = "system:serviceaccount:"

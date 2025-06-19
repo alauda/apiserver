@@ -20,10 +20,10 @@ import (
 	"reflect"
 	"testing"
 
+	v2scheme "github.com/alauda/apiserver/pkg/apis/apidiscovery/v2"
+	v2beta1scheme "github.com/alauda/apiserver/pkg/apis/apidiscovery/v2beta1"
 	v2 "k8s.io/api/apidiscovery/v2"
 	v2beta1 "k8s.io/api/apidiscovery/v2beta1"
-	v2scheme "k8s.io/apiserver/pkg/apis/apidiscovery/v2"
-	v2beta1scheme "k8s.io/apiserver/pkg/apis/apidiscovery/v2beta1"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"

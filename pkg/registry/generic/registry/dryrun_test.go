@@ -24,16 +24,16 @@ import (
 	"reflect"
 	"testing"
 
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	"github.com/alauda/apiserver/pkg/registry/rest"
+	"github.com/alauda/apiserver/pkg/storage"
+	etcd3testing "github.com/alauda/apiserver/pkg/storage/etcd3/testing"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend/factory"
 	"k8s.io/apimachinery/pkg/api/apitesting"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	"k8s.io/apiserver/pkg/registry/rest"
-	"k8s.io/apiserver/pkg/storage"
-	etcd3testing "k8s.io/apiserver/pkg/storage/etcd3/testing"
-	"k8s.io/apiserver/pkg/storage/storagebackend/factory"
 )
 
 func NewDryRunnableTestStorage(t *testing.T) (DryRunnableStorage, func()) {

@@ -19,7 +19,7 @@ package filters
 import (
 	"net/http"
 
-	"k8s.io/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/utils/clock"
 )
 

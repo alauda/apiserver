@@ -19,8 +19,8 @@ package union
 import (
 	"context"
 
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
 )
 
 // unionAuthTokenHandler authenticates tokens using a chain of authenticator.Token objects

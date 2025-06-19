@@ -19,7 +19,7 @@ package main
 import (
 	"fmt"
 
-	webhooktesting "k8s.io/apiserver/pkg/admission/plugin/webhook/testing"
+	webhooktesting "github.com/alauda/apiserver/pkg/admission/plugin/webhook/testing"
 )
 
 func main() {

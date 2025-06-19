@@ -25,8 +25,8 @@ import (
 
 	utiltesting "k8s.io/client-go/util/testing"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/apis/apiserver"
 )
 
 func strptr(s string) *string {

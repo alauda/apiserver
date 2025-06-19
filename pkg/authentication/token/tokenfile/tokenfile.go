@@ -24,8 +24,8 @@ import (
 	"os"
 	"strings"
 
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	"k8s.io/klog/v2"
 )
 

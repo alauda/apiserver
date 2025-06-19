@@ -23,8 +23,8 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 
-	"k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/library"
+	"github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/library"
 )
 
 func TestFormat(t *testing.T) {

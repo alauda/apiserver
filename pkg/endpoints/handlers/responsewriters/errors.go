@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 )
 
 // Avoid emitting errors that look like valid HTML. Quotes are okay.

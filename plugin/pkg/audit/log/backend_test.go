@@ -25,15 +25,15 @@ import (
 
 	"github.com/google/uuid"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/apis/audit/install"
+	auditv1 "github.com/alauda/apiserver/pkg/apis/audit/v1"
+	"github.com/alauda/apiserver/pkg/audit"
 	authnv1 "k8s.io/api/authentication/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/types"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/apis/audit/install"
-	auditv1 "k8s.io/apiserver/pkg/apis/audit/v1"
-	"k8s.io/apiserver/pkg/audit"
 )
 
 func init() {

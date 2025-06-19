@@ -17,8 +17,8 @@ limitations under the License.
 package authenticatorfactory
 
 import (
-	"k8s.io/apiserver/pkg/authentication/request/headerrequest"
-	"k8s.io/apiserver/pkg/server/dynamiccertificates"
+	"github.com/alauda/apiserver/pkg/authentication/request/headerrequest"
+	"github.com/alauda/apiserver/pkg/server/dynamiccertificates"
 )
 
 type RequestHeaderConfig struct {

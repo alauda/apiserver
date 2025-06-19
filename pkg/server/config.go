@@ -36,6 +36,33 @@ import (
 	"golang.org/x/crypto/cryptobyte"
 	jsonpatch "gopkg.in/evanphx/json-patch.v4"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/audit"
+	"github.com/alauda/apiserver/pkg/authentication/authenticator"
+	"github.com/alauda/apiserver/pkg/authentication/authenticatorfactory"
+	authenticatorunion "github.com/alauda/apiserver/pkg/authentication/request/union"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/endpoints/discovery"
+	discoveryendpoint "github.com/alauda/apiserver/pkg/endpoints/discovery/aggregated"
+	"github.com/alauda/apiserver/pkg/endpoints/filterlatency"
+	genericapifilters "github.com/alauda/apiserver/pkg/endpoints/filters"
+	apiopenapi "github.com/alauda/apiserver/pkg/endpoints/openapi"
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	genericfeatures "github.com/alauda/apiserver/pkg/features"
+	genericregistry "github.com/alauda/apiserver/pkg/registry/generic"
+	"github.com/alauda/apiserver/pkg/server/dynamiccertificates"
+	"github.com/alauda/apiserver/pkg/server/egressselector"
+	genericfilters "github.com/alauda/apiserver/pkg/server/filters"
+	"github.com/alauda/apiserver/pkg/server/healthz"
+	"github.com/alauda/apiserver/pkg/server/routes"
+	"github.com/alauda/apiserver/pkg/server/routine"
+	serverstore "github.com/alauda/apiserver/pkg/server/storage"
+	storagevalue "github.com/alauda/apiserver/pkg/storage/value"
+	"github.com/alauda/apiserver/pkg/storageversion"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
+	utilflowcontrol "github.com/alauda/apiserver/pkg/util/flowcontrol"
+	flowcontrolrequest "github.com/alauda/apiserver/pkg/util/flowcontrol/request"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
@@ -44,33 +71,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/version"
 	utilwaitgroup "k8s.io/apimachinery/pkg/util/waitgroup"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/audit"
-	"k8s.io/apiserver/pkg/authentication/authenticator"
-	"k8s.io/apiserver/pkg/authentication/authenticatorfactory"
-	authenticatorunion "k8s.io/apiserver/pkg/authentication/request/union"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	"k8s.io/apiserver/pkg/endpoints/discovery"
-	discoveryendpoint "k8s.io/apiserver/pkg/endpoints/discovery/aggregated"
-	"k8s.io/apiserver/pkg/endpoints/filterlatency"
-	genericapifilters "k8s.io/apiserver/pkg/endpoints/filters"
-	apiopenapi "k8s.io/apiserver/pkg/endpoints/openapi"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
-	genericfeatures "k8s.io/apiserver/pkg/features"
-	genericregistry "k8s.io/apiserver/pkg/registry/generic"
-	"k8s.io/apiserver/pkg/server/dynamiccertificates"
-	"k8s.io/apiserver/pkg/server/egressselector"
-	genericfilters "k8s.io/apiserver/pkg/server/filters"
-	"k8s.io/apiserver/pkg/server/healthz"
-	"k8s.io/apiserver/pkg/server/routes"
-	"k8s.io/apiserver/pkg/server/routine"
-	serverstore "k8s.io/apiserver/pkg/server/storage"
-	storagevalue "k8s.io/apiserver/pkg/storage/value"
-	"k8s.io/apiserver/pkg/storageversion"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
-	utilflowcontrol "k8s.io/apiserver/pkg/util/flowcontrol"
-	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/client-go/informers"
 	restclient "k8s.io/client-go/rest"
 	"k8s.io/component-base/featuregate"
@@ -88,7 +88,7 @@ import (
 	utilsnet "k8s.io/utils/net"
 
 	// install apis
-	_ "k8s.io/apiserver/pkg/apis/apiserver/install"
+	_ "github.com/alauda/apiserver/pkg/apis/apiserver/install"
 )
 
 // hostnameFunc is a function to set the hostnameFunc of this apiserver.
@@ -449,7 +449,7 @@ func NewConfig(codecs serializer.CodecFactory) *Config {
 		// A request body might be encoded in json, and is converted to
 		// proto when persisted in etcd, so we allow 2x as the largest request
 		// body size to be accepted and decoded in a write request.
-		// If this constant is changed, DefaultMaxRequestSizeBytes in k8s.io/apiserver/pkg/cel/limits.go
+		// If this constant is changed, DefaultMaxRequestSizeBytes in github.com/alauda/apiserver/pkg/cel/limits.go
 		// should be changed to reflect the new value, if the two haven't
 		// been wired together already somehow.
 		MaxRequestBodyBytes: int64(3 * 1024 * 1024),

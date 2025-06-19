@@ -17,8 +17,8 @@ limitations under the License.
 package filters
 
 import (
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 func newTestRequestInfoResolver() *request.RequestInfoFactory {

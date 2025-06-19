@@ -17,13 +17,13 @@ limitations under the License.
 package routes
 
 import (
-	handlersmetrics "k8s.io/apiserver/pkg/endpoints/handlers/metrics"
-	apimetrics "k8s.io/apiserver/pkg/endpoints/metrics"
-	"k8s.io/apiserver/pkg/server/mux"
-	cachermetrics "k8s.io/apiserver/pkg/storage/cacher/metrics"
-	etcd3metrics "k8s.io/apiserver/pkg/storage/etcd3/metrics"
-	flowcontrolmetrics "k8s.io/apiserver/pkg/util/flowcontrol/metrics"
-	peerproxymetrics "k8s.io/apiserver/pkg/util/peerproxy/metrics"
+	handlersmetrics "github.com/alauda/apiserver/pkg/endpoints/handlers/metrics"
+	apimetrics "github.com/alauda/apiserver/pkg/endpoints/metrics"
+	"github.com/alauda/apiserver/pkg/server/mux"
+	cachermetrics "github.com/alauda/apiserver/pkg/storage/cacher/metrics"
+	etcd3metrics "github.com/alauda/apiserver/pkg/storage/etcd3/metrics"
+	flowcontrolmetrics "github.com/alauda/apiserver/pkg/util/flowcontrol/metrics"
+	peerproxymetrics "github.com/alauda/apiserver/pkg/util/peerproxy/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 )
 

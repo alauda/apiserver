@@ -21,8 +21,8 @@ import (
 	"io"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/admission"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/admission"
 )
 
 func TestEnabledPluginNames(t *testing.T) {

@@ -20,8 +20,8 @@ import (
 	"net/url"
 	"testing"
 
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/util/webhook"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/util/webhook"
 )
 
 type doNothingAdmission struct{}

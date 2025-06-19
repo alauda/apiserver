@@ -19,8 +19,8 @@ package request
 import (
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 // TestNamespaceContext validates that a namespace can be get/set on a context object

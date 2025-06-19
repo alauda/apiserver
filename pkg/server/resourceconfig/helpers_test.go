@@ -22,12 +22,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
+	serverstore "github.com/alauda/apiserver/pkg/server/storage"
 	appsv1 "k8s.io/api/apps/v1"
 	apiv1 "k8s.io/api/core/v1"
 	extensionsapiv1beta1 "k8s.io/api/extensions/v1beta1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	serverstore "k8s.io/apiserver/pkg/server/storage"
 )
 
 func TestParseRuntimeConfig(t *testing.T) {

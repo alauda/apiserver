@@ -566,7 +566,7 @@ func TestPerRequestWithHandlerShouldAbortWriteAfterDeadline(t *testing.T) {
 				// c) under normal conditions the client expects a
 				// response from the server, but under stress the
 				// server may return an error as well:
-				//   go test -race k8s.io/apiserver/pkg/endpoints/filters -c
+				//   go test -race github.com/alauda/apiserver/pkg/endpoints/filters -c
 				//   stress -p=256 ./filters.test -test.run=TestPerRequestWriteDeadlineWithHandlerWritingIndefinitely
 				// the above stress test causes the server to return error
 				if err != nil {

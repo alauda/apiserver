@@ -20,8 +20,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
-	"k8s.io/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 )
 
 // WithRequestInfo attaches a RequestInfo to the context.

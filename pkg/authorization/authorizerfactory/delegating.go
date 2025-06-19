@@ -20,10 +20,10 @@ import (
 	"errors"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	authorizationcel "github.com/alauda/apiserver/pkg/authorization/cel"
+	"github.com/alauda/apiserver/plugin/pkg/authorizer/webhook"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	authorizationcel "k8s.io/apiserver/pkg/authorization/cel"
-	"k8s.io/apiserver/plugin/pkg/authorizer/webhook"
 	authorizationclient "k8s.io/client-go/kubernetes/typed/authorization/v1"
 )
 

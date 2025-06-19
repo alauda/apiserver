@@ -24,13 +24,13 @@ import (
 	"github.com/google/go-cmp/cmp"
 	"github.com/stretchr/testify/require"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	example2v1 "github.com/alauda/apiserver/pkg/apis/example2/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	example2v1 "k8s.io/apiserver/pkg/apis/example2/v1"
 )
 
 func initiateScheme(t *testing.T) *runtime.Scheme {

@@ -32,6 +32,11 @@ import (
 	"testing"
 	"time"
 
+	example "github.com/alauda/apiserver/pkg/apis/example"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
+	apitesting "github.com/alauda/apiserver/pkg/endpoints/testing"
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	"github.com/google/go-cmp/cmp"
 	"golang.org/x/net/websocket"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
@@ -44,11 +49,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/serializer/streaming"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	example "k8s.io/apiserver/pkg/apis/example"
-	"k8s.io/apiserver/pkg/endpoints/handlers"
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
-	apitesting "k8s.io/apiserver/pkg/endpoints/testing"
-	"k8s.io/apiserver/pkg/registry/rest"
 	"k8s.io/client-go/dynamic"
 	restclient "k8s.io/client-go/rest"
 )
@@ -612,7 +612,7 @@ func (t *fakeTimeoutFactory) TimeoutCh() (<-chan time.Time, func() bool) {
 }
 
 // serveWatch will serve a watch response according to the watcher and watchServer.
-// Before watchServer.HandleHTTP, an error may occur like k8s.io/apiserver/pkg/endpoints/handlers/watch.go#serveWatch does.
+// Before watchServer.HandleHTTP, an error may occur like github.com/alauda/apiserver/pkg/endpoints/handlers/watch.go#serveWatch does.
 func serveWatch(watcher watch.Interface, watchServer *handlers.WatchServer, preServeErr error) http.HandlerFunc {
 	return func(w http.ResponseWriter, req *http.Request) {
 		defer watcher.Stop()

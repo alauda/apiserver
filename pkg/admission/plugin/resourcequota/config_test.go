@@ -22,8 +22,8 @@ import (
 	"strings"
 	"testing"
 
+	resourcequotaapi "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
 	corev1 "k8s.io/api/core/v1"
-	resourcequotaapi "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
 )
 
 func TestLoadConfiguration(t *testing.T) {

@@ -27,9 +27,9 @@ import (
 	"github.com/emicklei/go-restful/v3"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"k8s.io/apiserver/pkg/endpoints/handlers/negotiation"
-	genericfeatures "k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/negotiation"
+	genericfeatures "github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 )
 
 type WrappedHandler struct {

@@ -19,8 +19,8 @@ package debug
 import (
 	"time"
 
-	"k8s.io/apiserver/pkg/endpoints/request"
-	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
+	flowcontrolrequest "github.com/alauda/apiserver/pkg/util/flowcontrol/request"
 )
 
 // QueueSetDump is an instant dump of queue-set.

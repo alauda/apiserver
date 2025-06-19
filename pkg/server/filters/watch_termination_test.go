@@ -22,8 +22,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/runtime"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
 )
 
 func TestWithWatchTerminationDuringShutdown(t *testing.T) {

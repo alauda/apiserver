@@ -21,9 +21,9 @@ import (
 	"net/url"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 func TestAnonymous(t *testing.T) {

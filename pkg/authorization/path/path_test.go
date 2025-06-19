@@ -20,7 +20,7 @@ import (
 	"context"
 	"testing"
 
-	"k8s.io/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 )
 
 func TestNewAuthorizer(t *testing.T) {

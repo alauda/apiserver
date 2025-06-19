@@ -27,9 +27,9 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/metrics"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/endpoints/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 	"k8s.io/component-base/metrics/testutil"
 )

@@ -23,7 +23,7 @@ import (
 	"reflect"
 	"testing"
 
-	"k8s.io/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authentication/user"
 )
 
 func TestTokenFile(t *testing.T) {

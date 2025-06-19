@@ -23,8 +23,8 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	"github.com/google/go-cmp/cmp"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 func TestAuthenticate(t *testing.T) {

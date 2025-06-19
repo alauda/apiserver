@@ -31,12 +31,12 @@ import (
 
 	gwebsocket "github.com/gorilla/websocket"
 
+	"github.com/alauda/apiserver/pkg/util/proxy/metrics"
 	"k8s.io/apimachinery/pkg/util/httpstream"
 	"k8s.io/apimachinery/pkg/util/httpstream/spdy"
 	"k8s.io/apimachinery/pkg/util/httpstream/wsstream"
 	utilnet "k8s.io/apimachinery/pkg/util/net"
 	constants "k8s.io/apimachinery/pkg/util/portforward"
-	"k8s.io/apiserver/pkg/util/proxy/metrics"
 	"k8s.io/client-go/tools/portforward"
 	"k8s.io/klog/v2"
 )

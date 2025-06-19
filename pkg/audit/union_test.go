@@ -20,8 +20,8 @@ import (
 	"strconv"
 	"testing"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
 	"k8s.io/apimachinery/pkg/types"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
 )
 
 type fakeBackend struct {

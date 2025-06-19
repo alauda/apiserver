@@ -25,6 +25,10 @@ import (
 
 	"k8s.io/klog/v2"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	resourcequotaapi "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
+	quota "github.com/alauda/apiserver/pkg/quota/v1"
+	"github.com/alauda/apiserver/pkg/quota/v1/generic"
 	corev1 "k8s.io/api/core/v1"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
@@ -33,10 +37,6 @@ import (
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/admission"
-	resourcequotaapi "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
-	quota "k8s.io/apiserver/pkg/quota/v1"
-	"k8s.io/apiserver/pkg/quota/v1/generic"
 	"k8s.io/client-go/util/workqueue"
 )
 

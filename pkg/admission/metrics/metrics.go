@@ -21,7 +21,7 @@ import (
 	"strconv"
 	"time"
 
-	"k8s.io/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission"
 	"k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 )

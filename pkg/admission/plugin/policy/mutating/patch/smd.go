@@ -20,21 +20,22 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"strings"
+
 	celgo "github.com/google/cel-go/cel"
 	celtypes "github.com/google/cel-go/common/types"
-	"strings"
 
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 	"sigs.k8s.io/structured-merge-diff/v4/schema"
 	"sigs.k8s.io/structured-merge-diff/v4/typed"
 	"sigs.k8s.io/structured-merge-diff/v4/value"
 
+	plugincel "github.com/alauda/apiserver/pkg/admission/plugin/cel"
+	"github.com/alauda/apiserver/pkg/cel/mutation/dynamic"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/managedfields"
-	plugincel "k8s.io/apiserver/pkg/admission/plugin/cel"
-	"k8s.io/apiserver/pkg/cel/mutation/dynamic"
 )
 
 // ApplyConfigurationCondition contains the inputs needed to compile and evaluate a cel expression

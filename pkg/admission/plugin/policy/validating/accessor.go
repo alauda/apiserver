@@ -17,9 +17,9 @@ limitations under the License.
 package validating
 
 import (
-	"k8s.io/api/admissionregistration/v1"
+	"github.com/alauda/apiserver/pkg/admission/plugin/policy/generic"
+	v1 "k8s.io/api/admissionregistration/v1"
 	"k8s.io/apimachinery/pkg/types"
-	"k8s.io/apiserver/pkg/admission/plugin/policy/generic"
 )
 
 func NewValidatingAdmissionPolicyAccessor(obj *v1.ValidatingAdmissionPolicy) generic.PolicyAccessor {

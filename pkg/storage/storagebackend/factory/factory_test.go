@@ -26,10 +26,10 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/storage/etcd3/testserver"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend"
 	clientv3 "go.etcd.io/etcd/client/v3"
 	"go.etcd.io/etcd/client/v3/kubernetes"
-	"k8s.io/apiserver/pkg/storage/etcd3/testserver"
-	"k8s.io/apiserver/pkg/storage/storagebackend"
 )
 
 type mockKV struct {

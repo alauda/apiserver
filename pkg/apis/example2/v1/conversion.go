@@ -17,8 +17,8 @@ limitations under the License.
 package v1
 
 import (
+	example "github.com/alauda/apiserver/pkg/apis/example"
 	conversion "k8s.io/apimachinery/pkg/conversion"
-	example "k8s.io/apiserver/pkg/apis/example"
 )
 
 func Convert_example_ReplicaSetSpec_To_v1_ReplicaSetSpec(in *example.ReplicaSetSpec, out *ReplicaSetSpec, s conversion.Scope) error {

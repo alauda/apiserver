@@ -20,11 +20,11 @@ import (
 	"net/http"
 	"sync"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	metainternalversion "k8s.io/apimachinery/pkg/apis/meta/internalversion"
 	"k8s.io/apimachinery/pkg/apis/meta/internalversion/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/sets"
-	"k8s.io/apiserver/pkg/endpoints/request"
 
 	"k8s.io/klog/v2"
 )

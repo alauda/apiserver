@@ -19,13 +19,13 @@ package object_test
 import (
 	"testing"
 
-	"k8s.io/api/admissionregistration/v1"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook/predicates/object"
+	v1 "k8s.io/api/admissionregistration/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook/predicates/object"
 )
 
 func TestObjectSelector(t *testing.T) {

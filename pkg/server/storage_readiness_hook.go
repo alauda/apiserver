@@ -22,9 +22,9 @@ import (
 	"sync"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/registry/rest"
 	"k8s.io/klog/v2"
 )
 

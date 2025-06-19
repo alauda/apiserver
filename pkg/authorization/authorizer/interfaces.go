@@ -20,9 +20,9 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 // Attributes is an interface used by an Authorizer to get information about a request

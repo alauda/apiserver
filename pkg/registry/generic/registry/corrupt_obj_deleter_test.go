@@ -22,13 +22,13 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	genericapirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/registry/rest"
+	"github.com/alauda/apiserver/pkg/storage"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/apis/example"
-	genericapirequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/registry/rest"
-	"k8s.io/apiserver/pkg/storage"
 
 	"k8s.io/utils/ptr"
 )

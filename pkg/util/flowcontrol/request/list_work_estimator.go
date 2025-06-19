@@ -21,13 +21,13 @@ import (
 	"net/http"
 	"net/url"
 
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/features"
+	"github.com/alauda/apiserver/pkg/storage"
+	etcdfeature "github.com/alauda/apiserver/pkg/storage/feature"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/features"
-	"k8s.io/apiserver/pkg/storage"
-	etcdfeature "k8s.io/apiserver/pkg/storage/feature"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	"k8s.io/klog/v2"
 )
 
@@ -162,7 +162,7 @@ func key(requestInfo *apirequest.RequestInfo) string {
 
 // NOTICE: Keep in sync with shouldDelegateList function in
 //
-//	staging/src/k8s.io/apiserver/pkg/storage/cacher/cacher.go
+//	staging/src/github.com/alauda/apiserver/pkg/storage/cacher/cacher.go
 func shouldListFromStorage(query url.Values, opts *metav1.ListOptions) bool {
 	resourceVersion := opts.ResourceVersion
 	match := opts.ResourceVersionMatch

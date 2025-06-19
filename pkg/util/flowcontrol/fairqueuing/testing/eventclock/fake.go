@@ -28,8 +28,8 @@ import (
 
 	baseclocktest "k8s.io/utils/clock/testing"
 
-	"k8s.io/apiserver/pkg/util/flowcontrol/counter"
-	"k8s.io/apiserver/pkg/util/flowcontrol/fairqueuing/eventclock"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/counter"
+	"github.com/alauda/apiserver/pkg/util/flowcontrol/fairqueuing/eventclock"
 	"k8s.io/klog/v2"
 )
 

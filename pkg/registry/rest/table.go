@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"time"
 
+	genericapirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	genericapirequest "k8s.io/apiserver/pkg/endpoints/request"
 )
 
 type defaultTableConvertor struct {

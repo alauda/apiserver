@@ -21,8 +21,8 @@ import (
 	"net/http/httptest"
 	"testing"
 
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	utilwaitgroup "k8s.io/apimachinery/pkg/util/waitgroup"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
 )
 
 func TestWithRetryAfter(t *testing.T) {

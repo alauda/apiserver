@@ -25,9 +25,9 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/registry/rest"
 )
 
 type CounterMetric interface {

@@ -21,8 +21,8 @@ import (
 	"strings"
 	"testing"
 
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 	authenticationv1 "k8s.io/api/authentication/v1"
-	apiservercel "k8s.io/apiserver/pkg/cel"
 )
 
 func TestCompileClaimsExpression(t *testing.T) {

@@ -33,6 +33,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
+	apidiscoveryv2conversion "github.com/alauda/apiserver/pkg/apis/apidiscovery/v2"
+	discoveryendpoint "github.com/alauda/apiserver/pkg/endpoints/discovery/aggregated"
 	apidiscoveryv2 "k8s.io/api/apidiscovery/v2"
 	apidiscoveryv2beta1 "k8s.io/api/apidiscovery/v2beta1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -41,8 +43,6 @@ import (
 	runtimeserializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
 	"k8s.io/apimachinery/pkg/version"
-	apidiscoveryv2conversion "k8s.io/apiserver/pkg/apis/apidiscovery/v2"
-	discoveryendpoint "k8s.io/apiserver/pkg/endpoints/discovery/aggregated"
 )
 
 var scheme = runtime.NewScheme()

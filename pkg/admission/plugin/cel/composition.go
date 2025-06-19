@@ -25,13 +25,13 @@ import (
 	"github.com/google/cel-go/common/types/ref"
 	"github.com/google/cel-go/common/types/traits"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/environment"
+	"github.com/alauda/apiserver/pkg/cel/lazy"
 	v1 "k8s.io/api/admission/v1"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/admission"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/environment"
-	"k8s.io/apiserver/pkg/cel/lazy"
 )
 
 const VariablesTypeName = "kubernetes.variables"

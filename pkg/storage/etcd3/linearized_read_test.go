@@ -19,9 +19,9 @@ package etcd3
 import (
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	"github.com/alauda/apiserver/pkg/storage"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/apis/example"
-	"k8s.io/apiserver/pkg/storage"
 )
 
 func TestLinearizedReadRevisionInvariant(t *testing.T) {

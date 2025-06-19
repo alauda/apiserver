@@ -22,14 +22,14 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"k8s.io/api/admissionregistration/v1"
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/plugin/policy/generic"
+	"github.com/alauda/apiserver/pkg/admission/plugin/policy/matching"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	v1 "k8s.io/api/admissionregistration/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/types"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/plugin/policy/generic"
-	"k8s.io/apiserver/pkg/admission/plugin/policy/matching"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/cache"
 )

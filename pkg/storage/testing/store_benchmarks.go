@@ -23,13 +23,13 @@ import (
 	"sync/atomic"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	"github.com/alauda/apiserver/pkg/storage"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/rand"
-	"k8s.io/apiserver/pkg/apis/example"
-	"k8s.io/apiserver/pkg/storage"
 )
 
 func RunBenchmarkStoreListCreate(ctx context.Context, b *testing.B, store storage.Interface, match metav1.ResourceVersionMatch) {

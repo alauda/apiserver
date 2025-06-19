@@ -19,10 +19,10 @@ package filters
 import (
 	"net/http"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp"
 	semconv "go.opentelemetry.io/otel/semconv/v1.17.0"
 	"go.opentelemetry.io/otel/trace"
-	"k8s.io/apiserver/pkg/endpoints/request"
 
 	tracing "k8s.io/component-base/tracing"
 )

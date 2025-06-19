@@ -22,11 +22,11 @@ import (
 	"reflect"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/apimachinery/pkg/fields"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 type Ignored struct {

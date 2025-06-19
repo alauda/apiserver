@@ -17,9 +17,9 @@ limitations under the License.
 package initializer
 
 import (
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
 	"k8s.io/apimachinery/pkg/api/meta"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
 	"k8s.io/client-go/dynamic"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"

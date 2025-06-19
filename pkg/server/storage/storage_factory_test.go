@@ -22,17 +22,17 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	exampleinstall "github.com/alauda/apiserver/pkg/apis/example/install"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	"github.com/alauda/apiserver/pkg/apis/example2"
+	example2install "github.com/alauda/apiserver/pkg/apis/example2/install"
+	"github.com/alauda/apiserver/pkg/storage/storagebackend"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	apimachineryversion "k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/apis/example"
-	exampleinstall "k8s.io/apiserver/pkg/apis/example/install"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	"k8s.io/apiserver/pkg/apis/example2"
-	example2install "k8s.io/apiserver/pkg/apis/example2/install"
-	"k8s.io/apiserver/pkg/storage/storagebackend"
 	version "k8s.io/component-base/version"
 )
 

@@ -21,12 +21,12 @@ import (
 	"errors"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	v1 "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"
+	"github.com/alauda/apiserver/pkg/quota/v1/generic"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
-	v1 "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota/v1"
-	"k8s.io/apiserver/pkg/quota/v1/generic"
 )
 
 func TestPrettyPrint(t *testing.T) {

@@ -25,15 +25,15 @@ import (
 	"strings"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	"github.com/stretchr/testify/assert"
-	"k8s.io/apiserver/pkg/endpoints/request"
 	clocktesting "k8s.io/utils/clock/testing"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	webhooktesting "github.com/alauda/apiserver/pkg/admission/plugin/webhook/testing"
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
 	"k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/admission"
-	webhooktesting "k8s.io/apiserver/pkg/admission/plugin/webhook/testing"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
 )
 
 // BenchmarkAdmit tests the performance cost of invoking a mutating webhook
@@ -42,7 +42,7 @@ func BenchmarkAdmit(b *testing.B) {
 	if len(testServerURL) == 0 {
 		b.Log("warning, WEBHOOK_TEST_SERVER_URL not set, starting in-process server, benchmarks will include webhook cost.")
 		b.Log("to run a standalone server, run:")
-		b.Log("go run k8s.io/apiserver/pkg/admission/plugin/webhook/testing/main/main.go")
+		b.Log("go run github.com/alauda/apiserver/pkg/admission/plugin/webhook/testing/main/main.go")
 		testServer := webhooktesting.NewTestServer(b)
 		testServer.StartTLS()
 		defer testServer.Close()

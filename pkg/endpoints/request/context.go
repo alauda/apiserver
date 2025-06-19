@@ -19,8 +19,8 @@ package request
 import (
 	"context"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	"k8s.io/apiserver/pkg/authentication/user"
 )
 
 // The key type is unexported to prevent collisions

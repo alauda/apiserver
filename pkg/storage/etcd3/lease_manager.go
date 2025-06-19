@@ -21,8 +21,8 @@ import (
 	"sync"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/storage/etcd3/metrics"
 	clientv3 "go.etcd.io/etcd/client/v3"
-	"k8s.io/apiserver/pkg/storage/etcd3/metrics"
 )
 
 const (

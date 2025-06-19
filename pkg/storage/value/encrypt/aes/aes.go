@@ -30,7 +30,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"k8s.io/apiserver/pkg/storage/value"
+	"github.com/alauda/apiserver/pkg/storage/value"
 	"k8s.io/klog/v2"
 )
 

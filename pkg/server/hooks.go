@@ -23,9 +23,9 @@ import (
 	"net/http"
 	"runtime/debug"
 
+	"github.com/alauda/apiserver/pkg/server/healthz"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/server/healthz"
 	restclient "k8s.io/client-go/rest"
 	"k8s.io/klog/v2"
 )

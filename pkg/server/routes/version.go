@@ -21,8 +21,8 @@ import (
 
 	"github.com/emicklei/go-restful/v3"
 
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
 	"k8s.io/apimachinery/pkg/version"
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
 )
 
 // Version provides a webservice with version information.

@@ -26,12 +26,12 @@ import (
 	"testing"
 	"time"
 
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	genericapitesting "github.com/alauda/apiserver/pkg/endpoints/testing"
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/wait"
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	genericapitesting "k8s.io/apiserver/pkg/endpoints/testing"
-	"k8s.io/apiserver/pkg/registry/rest"
 )
 
 type fakeAuditSink struct {

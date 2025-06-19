@@ -23,10 +23,10 @@ import (
 	"net/url"
 	"strings"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/validation/field"
-	"k8s.io/apiserver/pkg/apis/apiserver"
 )
 
 const (

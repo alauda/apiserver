@@ -21,9 +21,9 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
 	flowcontrol "k8s.io/api/flowcontrol/v1"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/endpoints/request"
 )
 
 // This file provides an easy way to mark a value for formatting to

@@ -21,8 +21,8 @@ import (
 
 	"github.com/google/uuid"
 
-	"k8s.io/apiserver/pkg/server"
-	"k8s.io/apiserver/pkg/server/dynamiccertificates"
+	"github.com/alauda/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/server/dynamiccertificates"
 	"k8s.io/client-go/rest"
 	certutil "k8s.io/client-go/util/cert"
 )

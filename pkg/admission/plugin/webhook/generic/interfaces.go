@@ -19,9 +19,9 @@ package generic
 import (
 	"context"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/admission/plugin/webhook"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/admission/plugin/webhook"
 )
 
 type VersionedAttributeAccessor interface {

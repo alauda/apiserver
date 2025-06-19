@@ -19,9 +19,9 @@ package resolver
 import (
 	"fmt"
 
+	"github.com/alauda/apiserver/pkg/endpoints/openapi"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/endpoints/openapi"
 	"k8s.io/kube-openapi/pkg/common"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )

@@ -20,8 +20,8 @@ import (
 	"context"
 	"sync"
 
-	celmetrics "k8s.io/apiserver/pkg/authorization/cel"
-	webhookmetrics "k8s.io/apiserver/plugin/pkg/authorizer/webhook/metrics"
+	celmetrics "github.com/alauda/apiserver/pkg/authorization/cel"
+	webhookmetrics "github.com/alauda/apiserver/plugin/pkg/authorizer/webhook/metrics"
 	compbasemetrics "k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 )

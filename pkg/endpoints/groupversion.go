@@ -22,17 +22,17 @@ import (
 
 	restful "github.com/emicklei/go-restful/v3"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/endpoints/discovery"
+	"github.com/alauda/apiserver/pkg/registry/rest"
+	"github.com/alauda/apiserver/pkg/storageversion"
 	apidiscoveryv2 "k8s.io/api/apidiscovery/v2"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	utilerrors "k8s.io/apimachinery/pkg/util/errors"
 	"k8s.io/apimachinery/pkg/util/managedfields"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	"k8s.io/apiserver/pkg/endpoints/discovery"
-	"k8s.io/apiserver/pkg/registry/rest"
-	"k8s.io/apiserver/pkg/storageversion"
 )
 
 // ConvertabilityChecker indicates what versions a GroupKind is available in.

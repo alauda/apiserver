@@ -21,9 +21,9 @@ import (
 
 	fuzz "github.com/google/gofuzz"
 
+	"github.com/alauda/apiserver/pkg/apis/audit"
 	"k8s.io/apimachinery/pkg/runtime"
 	runtimeserializer "k8s.io/apimachinery/pkg/runtime/serializer"
-	"k8s.io/apiserver/pkg/apis/audit"
 )
 
 // Funcs returns the fuzzer functions for the audit api group.

@@ -23,9 +23,9 @@ import (
 	"reflect"
 	"testing"
 
-	"k8s.io/apiserver/pkg/authentication/authenticatorfactory"
-	"k8s.io/apiserver/pkg/authentication/request/headerrequest"
-	"k8s.io/apiserver/pkg/server"
+	"github.com/alauda/apiserver/pkg/authentication/authenticatorfactory"
+	"github.com/alauda/apiserver/pkg/authentication/request/headerrequest"
+	"github.com/alauda/apiserver/pkg/server"
 	openapicommon "k8s.io/kube-openapi/pkg/common"
 )
 

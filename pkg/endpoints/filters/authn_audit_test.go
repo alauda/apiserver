@@ -24,8 +24,8 @@ import (
 	"strings"
 	"testing"
 
-	auditinternal "k8s.io/apiserver/pkg/apis/audit"
-	"k8s.io/apiserver/pkg/audit/policy"
+	auditinternal "github.com/alauda/apiserver/pkg/apis/audit"
+	"github.com/alauda/apiserver/pkg/audit/policy"
 )
 
 func TestFailedAuthnAudit(t *testing.T) {

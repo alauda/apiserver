@@ -23,8 +23,8 @@ import (
 	"sync"
 	"time"
 
-	epmetrics "k8s.io/apiserver/pkg/endpoints/metrics"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
+	epmetrics "github.com/alauda/apiserver/pkg/endpoints/metrics"
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	compbasemetrics "k8s.io/component-base/metrics"
 	"k8s.io/component-base/metrics/legacyregistry"
 	basemetricstestutil "k8s.io/component-base/metrics/testutil"

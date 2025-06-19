@@ -23,20 +23,20 @@ import (
 
 	clientv3 "go.etcd.io/etcd/client/v3"
 
+	"github.com/alauda/apiserver/pkg/apis/example"
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	example2v1 "github.com/alauda/apiserver/pkg/apis/example2/v1"
+	"github.com/alauda/apiserver/pkg/storage"
+	"github.com/alauda/apiserver/pkg/storage/etcd3"
+	etcd3testing "github.com/alauda/apiserver/pkg/storage/etcd3/testing"
+	storagetesting "github.com/alauda/apiserver/pkg/storage/testing"
+	"github.com/alauda/apiserver/pkg/storage/value/encrypt/identity"
 	"k8s.io/apimachinery/pkg/api/apitesting"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
-	"k8s.io/apiserver/pkg/apis/example"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	example2v1 "k8s.io/apiserver/pkg/apis/example2/v1"
-	"k8s.io/apiserver/pkg/storage"
-	"k8s.io/apiserver/pkg/storage/etcd3"
-	etcd3testing "k8s.io/apiserver/pkg/storage/etcd3/testing"
-	storagetesting "k8s.io/apiserver/pkg/storage/testing"
-	"k8s.io/apiserver/pkg/storage/value/encrypt/identity"
 )
 
 var (

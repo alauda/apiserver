@@ -21,11 +21,11 @@ import (
 	"net/http"
 	"testing"
 
+	"github.com/alauda/apiserver/pkg/apis/apiserver"
+	"github.com/alauda/apiserver/pkg/authentication/user"
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	"github.com/alauda/apiserver/pkg/authorization/cel"
 	authorizationv1 "k8s.io/api/authorization/v1"
-	"k8s.io/apiserver/pkg/apis/apiserver"
-	"k8s.io/apiserver/pkg/authentication/user"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	"k8s.io/apiserver/pkg/authorization/cel"
 )
 
 func TestAuthorizerMetrics(t *testing.T) {

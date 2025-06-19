@@ -17,8 +17,8 @@ limitations under the License.
 package generic
 
 import (
+	quota "github.com/alauda/apiserver/pkg/quota/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	quota "k8s.io/apiserver/pkg/quota/v1"
 )
 
 // implements a basic configuration

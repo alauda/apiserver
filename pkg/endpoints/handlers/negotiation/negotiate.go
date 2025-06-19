@@ -24,10 +24,10 @@ import (
 
 	"github.com/munnerz/goautoneg"
 
+	"github.com/alauda/apiserver/pkg/features"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/features"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
 )
 
 // MediaTypesForSerializer returns a list of media and stream media types for the server.

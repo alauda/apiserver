@@ -22,7 +22,7 @@ import (
 	"github.com/google/cel-go/common/types"
 	"github.com/google/cel-go/common/types/ref"
 
-	apiservercel "k8s.io/apiserver/pkg/cel"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 )
 
 // Semver provides a CEL function library extension for [semver.Version].

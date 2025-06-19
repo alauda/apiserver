@@ -20,14 +20,14 @@ import (
 	"context"
 	"reflect"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	"github.com/alauda/apiserver/pkg/cel/environment"
 	admissionv1 "k8s.io/api/admission/v1"
 	authenticationv1 "k8s.io/api/authentication/v1"
 	v1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/admission"
-	"k8s.io/apiserver/pkg/cel/environment"
 )
 
 // conditionCompiler implement the interface ConditionCompiler.
@@ -86,7 +86,7 @@ func objectToResolveVal(r runtime.Object) (interface{}, error) {
 
 // ForInput evaluates the compiled CEL expressions converting them into CELEvaluations
 // errors per evaluation are returned on the Evaluation object
-// runtimeCELCostBudget was added for testing purpose only. Callers should always use const RuntimeCELCostBudget from k8s.io/apiserver/pkg/apis/cel/config.go as input.
+// runtimeCELCostBudget was added for testing purpose only. Callers should always use const RuntimeCELCostBudget from github.com/alauda/apiserver/pkg/apis/cel/config.go as input.
 func (c *condition) ForInput(ctx context.Context, versionedAttr *admission.VersionedAttributes, request *admissionv1.AdmissionRequest, inputs OptionalVariableBindings, namespace *v1.Namespace, runtimeCELCostBudget int64) ([]EvaluationResult, int64, error) {
 	// TODO: replace unstructured with ref.Val for CEL variables when native type support is available
 	evaluations := make([]EvaluationResult, len(c.compilationResults))
@@ -111,12 +111,12 @@ func (c *condition) ForInput(ctx context.Context, versionedAttr *admission.Versi
 	return evaluations, remainingBudget, nil
 }
 
-// TODO: to reuse https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/apiserver/pkg/admission/plugin/webhook/request/admissionreview.go#L154
+// TODO: to reuse https://github.com/kubernetes/kubernetes/blob/master/staging/src/github.com/alauda/apiserver/pkg/admission/plugin/webhook/request/admissionreview.go#L154
 func CreateAdmissionRequest(attr admission.Attributes, equivalentGVR metav1.GroupVersionResource, equivalentKind metav1.GroupVersionKind) *admissionv1.AdmissionRequest {
 	// Attempting to use same logic as webhook for constructing resource
 	// GVK, GVR, subresource
 	// Use the GVK, GVR that the matcher decided was equivalent to that of the request
-	// https://github.com/kubernetes/kubernetes/blob/90c362b3430bcbbf8f245fadbcd521dab39f1d7c/staging/src/k8s.io/apiserver/pkg/admission/plugin/webhook/generic/webhook.go#L182-L210
+	// https://github.com/kubernetes/kubernetes/blob/90c362b3430bcbbf8f245fadbcd521dab39f1d7c/staging/src/github.com/alauda/apiserver/pkg/admission/plugin/webhook/generic/webhook.go#L182-L210
 	gvk := equivalentKind
 	gvr := equivalentGVR
 	subresource := attr.GetSubresource()

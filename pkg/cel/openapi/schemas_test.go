@@ -24,7 +24,7 @@ import (
 
 	"google.golang.org/protobuf/proto"
 
-	apiservercel "k8s.io/apiserver/pkg/cel"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
 	"k8s.io/kube-openapi/pkg/validation/spec"
 )
 

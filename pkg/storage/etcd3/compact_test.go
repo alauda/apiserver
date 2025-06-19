@@ -23,7 +23,7 @@ import (
 	etcdrpc "go.etcd.io/etcd/api/v3/v3rpc/rpctypes"
 	clientv3 "go.etcd.io/etcd/client/v3"
 
-	"k8s.io/apiserver/pkg/storage/etcd3/testserver"
+	"github.com/alauda/apiserver/pkg/storage/etcd3/testserver"
 )
 
 func TestCompact(t *testing.T) {

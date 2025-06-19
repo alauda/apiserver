@@ -27,7 +27,7 @@ import (
 	v1 "k8s.io/api/core/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	resourcequota "k8s.io/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
+	resourcequota "github.com/alauda/apiserver/pkg/admission/plugin/resourcequota/apis/resourcequota"
 )
 
 func init() {

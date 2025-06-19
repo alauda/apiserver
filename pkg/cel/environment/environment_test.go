@@ -23,10 +23,10 @@ import (
 
 	"github.com/google/cel-go/cel"
 
+	"github.com/alauda/apiserver/pkg/authorization/authorizer"
+	apiservercel "github.com/alauda/apiserver/pkg/cel"
+	"github.com/alauda/apiserver/pkg/cel/library"
 	"k8s.io/apimachinery/pkg/util/version"
-	"k8s.io/apiserver/pkg/authorization/authorizer"
-	apiservercel "k8s.io/apiserver/pkg/cel"
-	"k8s.io/apiserver/pkg/cel/library"
 )
 
 type envTypeAndVersion struct {

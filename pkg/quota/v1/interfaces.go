@@ -17,10 +17,10 @@ limitations under the License.
 package v1
 
 import (
+	"github.com/alauda/apiserver/pkg/admission"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
-	"k8s.io/apiserver/pkg/admission"
 	"k8s.io/client-go/tools/cache"
 )
 

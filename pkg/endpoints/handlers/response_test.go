@@ -27,6 +27,9 @@ import (
 	"testing"
 	"time"
 
+	examplev1 "github.com/alauda/apiserver/pkg/apis/example/v1"
+	"github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/registry/rest"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/meta"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
@@ -35,9 +38,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	runtimejson "k8s.io/apimachinery/pkg/runtime/serializer/json"
 	"k8s.io/apimachinery/pkg/watch"
-	examplev1 "k8s.io/apiserver/pkg/apis/example/v1"
-	"k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/registry/rest"
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 )
 

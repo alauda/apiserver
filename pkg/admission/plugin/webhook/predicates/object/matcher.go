@@ -17,11 +17,11 @@ limitations under the License.
 package object
 
 import (
+	"github.com/alauda/apiserver/pkg/admission"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apiserver/pkg/admission"
 	"k8s.io/klog/v2"
 )
 

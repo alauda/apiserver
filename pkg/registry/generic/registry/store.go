@@ -25,6 +25,17 @@ import (
 
 	"sigs.k8s.io/structured-merge-diff/v4/fieldpath"
 
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/fieldmanager"
+	genericapirequest "github.com/alauda/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/features"
+	"github.com/alauda/apiserver/pkg/registry/generic"
+	"github.com/alauda/apiserver/pkg/registry/rest"
+	"github.com/alauda/apiserver/pkg/storage"
+	storeerr "github.com/alauda/apiserver/pkg/storage/errors"
+	"github.com/alauda/apiserver/pkg/storage/etcd3/metrics"
+	"github.com/alauda/apiserver/pkg/util/dryrun"
+	utilfeature "github.com/alauda/apiserver/pkg/util/feature"
+	flowcontrolrequest "github.com/alauda/apiserver/pkg/util/flowcontrol/request"
 	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/api/meta"
 	"k8s.io/apimachinery/pkg/api/validation"
@@ -40,17 +51,6 @@ import (
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/apiserver/pkg/endpoints/handlers/fieldmanager"
-	genericapirequest "k8s.io/apiserver/pkg/endpoints/request"
-	"k8s.io/apiserver/pkg/features"
-	"k8s.io/apiserver/pkg/registry/generic"
-	"k8s.io/apiserver/pkg/registry/rest"
-	"k8s.io/apiserver/pkg/storage"
-	storeerr "k8s.io/apiserver/pkg/storage/errors"
-	"k8s.io/apiserver/pkg/storage/etcd3/metrics"
-	"k8s.io/apiserver/pkg/util/dryrun"
-	utilfeature "k8s.io/apiserver/pkg/util/feature"
-	flowcontrolrequest "k8s.io/apiserver/pkg/util/flowcontrol/request"
 	"k8s.io/client-go/tools/cache"
 
 	"k8s.io/klog/v2"
@@ -81,7 +81,7 @@ type GenericStore interface {
 	GetDeleteStrategy() rest.RESTDeleteStrategy
 }
 
-// Store implements k8s.io/apiserver/pkg/registry/rest.StandardStorage. It's
+// Store implements github.com/alauda/apiserver/pkg/registry/rest.StandardStorage. It's
 // intended to be embeddable and allows the consumer to implement any
 // non-generic functions that are required. This object is intended to be
 // copyable so that it can be used in different ways but share the same

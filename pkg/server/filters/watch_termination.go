@@ -20,8 +20,8 @@ import (
 	"errors"
 	"net/http"
 
-	"k8s.io/apiserver/pkg/endpoints/handlers/responsewriters"
-	apirequest "k8s.io/apiserver/pkg/endpoints/request"
+	"github.com/alauda/apiserver/pkg/endpoints/handlers/responsewriters"
+	apirequest "github.com/alauda/apiserver/pkg/endpoints/request"
 	"k8s.io/klog/v2"
 )
 

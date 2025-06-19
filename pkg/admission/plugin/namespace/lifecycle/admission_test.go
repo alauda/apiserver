@@ -23,6 +23,8 @@ import (
 	"testing"
 	"time"
 
+	"github.com/alauda/apiserver/pkg/admission"
+	kubeadmission "github.com/alauda/apiserver/pkg/admission/initializer"
 	"github.com/google/go-cmp/cmp"
 	v1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/errors"
@@ -31,8 +33,6 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/util/sets"
 	"k8s.io/apimachinery/pkg/util/wait"
-	"k8s.io/apiserver/pkg/admission"
-	kubeadmission "k8s.io/apiserver/pkg/admission/initializer"
 	informers "k8s.io/client-go/informers"
 	clientset "k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/kubernetes/fake"
